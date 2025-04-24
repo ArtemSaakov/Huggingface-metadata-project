@@ -1,0 +1,17 @@
+{
+  "title": 0,
+  "creator": 1,
+  "subject": 2,
+  "description": 3,
+  "publisher": 4,
+  "date": 5,
+  "type": 6,
+  "format": 7,
+  "identifier": 8,
+  "source": 9,
+  "language": 10,
+  "relation": 11,
+  "rights": 12,
+  "contributor": 13,
+  "coverage": 14
+}

@@ -5,6 +5,7 @@ from transformers import (
     AutoModelForSequenceClassification,
     pipeline,
 )
+from pathlib import Path
 
 
 def chunk_and_classify(text, classifier, tokenizer, max_len=512, stride=50):
@@ -55,7 +56,7 @@ def main():
     # This initial set of lines defines the command line arguments this
     # program uses
 
-    default_dir = "BERTley/checkpoint-3486/"
+    default_dir = Path("./BERTley/checkpoint-3486/").resolve()
     parser = argparse.ArgumentParser(
         description="Run inference on a trained BERT metadata classifier"
     )
@@ -84,7 +85,7 @@ def main():
         "text-classification",
         model=model,
         tokenizer=tokenizer,
-        return_all_scores=True,
+        top_k=4,
     )
 
     # 3) Read your document
