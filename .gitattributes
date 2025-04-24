@@ -1,0 +1,2 @@
+BERTley/checkpoint-3486/*.safetensors filter=lfs diff=lfs merge=lfs -text
+BERTley/checkpoint-3486/optimizer.pt filter=lfs diff=lfs merge=lfs -text
